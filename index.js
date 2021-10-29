@@ -52,12 +52,13 @@ function startRound(){
 
 
 
-let numClosedDoors = 3;
-let openDoor1;
-let openDoor2;
-let openDoor3;
 
 function randomChoreDoorGenerator(){
+  let numClosedDoors = 3;
+  let openDoor1;
+  let openDoor2;
+  let openDoor3;
+
   let choreDoor = Math.floor(Math.random()* numClosedDoors);
   if (choreDoor === 0){
     openDoor1 = botDoorPath;
