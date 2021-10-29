@@ -51,10 +51,10 @@ function startRound(){
 
 
 
-
+ let numClosedDoors = 3;
 
 function randomChoreDoorGenerator(){
-  let numClosedDoors = 3;
+ 
   let openDoor1;
   let openDoor2;
   let openDoor3;
