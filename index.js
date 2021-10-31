@@ -37,7 +37,8 @@ startButton.onclick = () =>{
     startRound();
   }
 }
-    
+
+
 
 
 function startRound(){
@@ -51,14 +52,13 @@ function startRound(){
 
 
 
- let numClosedDoors = 3;
-  let openDoor1;
-  let openDoor2;
-  let openDoor3;
+let numClosedDoors = 3;
+let openDoor1;
+let openDoor2;
+let openDoor3;
+let choreDoor = Math.floor(Math.random()* numClosedDoors);
 
 function randomChoreDoorGenerator(){
- 
-  let choreDoor = Math.floor(Math.random()* numClosedDoors);
   if (choreDoor === 0){
     openDoor1 = botDoorPath;
     openDoor2 = beachDoorPath;
@@ -76,10 +76,10 @@ function randomChoreDoorGenerator(){
 
 };
 
-randomChoreDoorGenerator();
+randomChoreDoorGenerator()
 
 
- 
+
 function gameOver(status){
   if (status === 'win'){
     startButton.innerHTML = 'You win! Play again?'
@@ -87,9 +87,10 @@ function gameOver(status){
     startButton.innerHTML = 'Game over! Play again?';  
   }
   currentlyPlaying = false;
+  
 }
-
 let  closedDoorPath = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
+
 
 function isBot(door){
   if (door.src === botDoorPath){
@@ -114,9 +115,11 @@ function playDoor(door){
   }else if(isBot(door)){
     gameOver()
   }
+
 }
 
 startRound();
+
 
 
 
