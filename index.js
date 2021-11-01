@@ -47,6 +47,7 @@ function startRound(){
   doorImage3.src = 'https://content.codecademy.com/projects/chore-door/images/closed_door.svg';
   numClosedDoors = 3;
   startButton.innerHTML = 'Good Luck';
+  randomChoreDoorGenerator()
   currentlyPlaying = true;
 }
 
@@ -56,9 +57,9 @@ let numClosedDoors = 3;
 let openDoor1;
 let openDoor2;
 let openDoor3;
-let choreDoor = Math.floor(Math.random()* numClosedDoors);
 
 function randomChoreDoorGenerator(){
+  let choreDoor = Math.floor(Math.random()* numClosedDoors);
   if (choreDoor === 0){
     openDoor1 = botDoorPath;
     openDoor2 = beachDoorPath;
@@ -76,7 +77,7 @@ function randomChoreDoorGenerator(){
 
 };
 
-randomChoreDoorGenerator()
+
 
 
 
